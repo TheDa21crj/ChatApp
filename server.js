@@ -21,6 +21,7 @@ const botName = "Admin";
 
 // Run when client connects
 io.on("connection", (socket) => {
+    // to get the username and room name
     socket.on("joinRoom", ({ username, room }) => {
         const user = userJoin(socket.id, username, room);
 
